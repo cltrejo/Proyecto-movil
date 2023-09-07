@@ -1,0 +1,24 @@
+<ion-content [fullscreen]="true">
+  <p>
+    <mat-toolbar>
+      <span>Te Llevo APP</span>
+    </mat-toolbar>
+  </p>
+  <div id="container">
+  <h1>Restablecer contraseña</h1>
+  <mat-form-field>
+    <mat-label>Ingresa tu usuario</mat-label>
+    <input matInput>
+  </mat-form-field>
+  <br>
+  <mat-form-field>
+    <mat-label>Ingresa tu nueva contraseña</mat-label>
+    <input matInput [type]="hide ? 'password' : 'text'">
+    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+    </button>
+  </mat-form-field>
+  <br>
+  <ion-button fill="outline" [routerLink]="['/login']">Restablecer contraseña</ion-button>
+  </div>
+</ion-content>
